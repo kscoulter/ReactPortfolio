@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import LinkButton from './components/LinkButton';
+import MediumFeed from './components/MediumFeed';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         <LinkButton url="https://medium.com/@kcoulter" name="medium"/>
         <LinkButton url="https://github.com/kscoulter" name="github"/>
         <LinkButton url="https://www.linkedin.com/in/kseniacoulter" name="linkedin"/>
+        <MediumFeed />
       </div>
     );
   }
