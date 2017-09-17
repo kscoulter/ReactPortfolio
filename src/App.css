@@ -103,7 +103,7 @@ nav li a{
 }
 
 /*-------Skills--------*/
-.skills h1 {
+section h1 {
   background-color: #0C0C0C;
   font-size: 45px;
   text-align: center;
@@ -250,7 +250,7 @@ i {
 
 /*----------Contact-----------*/
 .contact{
-  /*background-image: url("../images/bluemountainsbw.jpg");*/
+  background-image: url("http://kseniacoulter.com/images/bluemountainsbw.jpg");
   background-size: cover;
   background-position: center;
   height: 550px;
