@@ -330,3 +330,27 @@ footer p {
     padding-bottom: 5px;
   }
 }
+section.medium-posts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+section.medium-posts a {
+  height: 25vh;
+  text-decoration: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+}
+section.medium-posts a h2 {
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  font-size: 1.4em;
+  height: 100%;
+  padding: .5em;
+}
+@media (min-width: 700px) {
+  section.medium-posts a {
+    width: 25%;
+  }
+}

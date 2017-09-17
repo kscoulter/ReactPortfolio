@@ -52,17 +52,15 @@ class MediumFeed extends React.Component{
   }
     render(){
     return(
-        <div className="medium-posts">
+        <section className="medium-posts">
         {this.state.posts.map(function(post, index){
           return (
-            <a href={post.link} key={index}>
-              <div style={{backgroundImage: 'url('+post.image+')'}}>
+            <a href={post.link} key={index} style={{backgroundImage: 'url('+post.image+')'}}>
               <h2 key={index}>{post.title}</h2>
-              </div>
             </a>
           )
         })}
-        </div>
+        </section>
     )
   }
 }
