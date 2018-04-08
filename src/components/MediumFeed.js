@@ -1,7 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import xml2js from 'xml2js';
-import $ from 'jquery';
 
 class MediumFeed extends React.Component{
   constructor(props){
@@ -16,14 +14,13 @@ class MediumFeed extends React.Component{
   }
   componentDidMount(){
     var self = this;
-    axios.get('https://medium.com/feed/@kcoulter')
+    axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40kcoulter')
       .then(function(response) {
-        const parser = new xml2js.Parser()
-        parser.parseString(response.data, function(err, result){
-          const posts = result.rss.channel[0].item;
+          const posts = response.data.items;
+          console.log(posts);
           self.filterPosts(posts);
           self.pullImage(self.state.posts);
-        })
+        // })
       })
       .catch(function (error){
         console.log(error);
@@ -32,8 +29,8 @@ class MediumFeed extends React.Component{
   filterPosts(posts){
     const filteredPosts = []
     posts.forEach(function(post){
-      //if category key exists, it is a post and not a comment
-      if(post.category){
+      //if category array is not empty, it is a post and not a comment
+      if(post.categories.length > 0){
         filteredPosts.push(post);
       }
     })
@@ -41,7 +38,7 @@ class MediumFeed extends React.Component{
   }
   pullImage(posts){
     posts.forEach(function(post){
-      const contentStr = post['content:encoded'][0];
+      const contentStr = post.description;
       // const re = new RegExp('<[img](.+?)(\/>)');
       //this might be a pretty brittle expression.
       const re = new RegExp('"https([^"]+)"');
@@ -52,15 +49,15 @@ class MediumFeed extends React.Component{
   }
     render(){
     return(
-        <section className="medium-posts">
+        <div className="card-container medium-posts">
         {this.state.posts.map(function(post, index){
           return (
-            <a href={post.link} key={index} style={{backgroundImage: 'url('+post.image+')'}}>
-              <h2 key={index}>{post.title}</h2>
+            <a className="card" href={post.link} key={index} style={{backgroundImage: 'url('+post.image+')'}}>
+              <h2 className="post-title" key={index}>{post.title}</h2>
             </a>
           )
         })}
-        </section>
+        </div>
     )
   }
 }
