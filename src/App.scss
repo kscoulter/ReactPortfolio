@@ -5,13 +5,15 @@
 @import "./styles/contact";
 @import "./styles/social-button";
 @import "./styles/footer";
+@import "./styles/updates";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  color: white;
+  color: #5F5F5F;
   p {
     font-family: 'Open Sans', sans-serif;
   }

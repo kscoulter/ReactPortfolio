@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import SectionHeading from './components/SectionHeading';
 import LinkButton from './components/LinkButton';
+import GenericCard from './components/GenericCard';
 import ProjectCard from './components/ProjectCard';
 import TalkCard from './components/TalkCard';
 import MediumFeed from './components/MediumFeed';
 import Footer from './components/Footer';
 import concentration from './assets/images/concentration.jpg';
 import manspreading from './assets/images/isitmanspreading.png';
+import constellation from './assets/images/github_constellation_roadshow.png';
+import forwardJs from './assets/images/ForwardJS.jpeg';
 
 class App extends Component {
   render() {
@@ -26,6 +29,27 @@ class App extends Component {
 
         <section className="latest updates">
           <SectionHeading heading="updates"/>
+          <GenericCard
+            title="Ksenia is Speaking at Github Constellation"
+            description="GitHub Team's two-part event celebrating software builders and entrepreneurs in Washington DC. Whether you’re a new developer or leading a team of them, they’ve got you covered. Join me to learn how to get the most out of code reviews."
+            mediaType="image"
+            media={constellation}
+            mediaUrl="https://githubconstellation.com/washington-dc/#getting-the-most-out-of-code-reviews"
+            date="Apr 19, 2018" />
+          <GenericCard
+            title="Ksenia Spoke at ForwardJS in Ottawa"
+            description="Spreading the gospel of code reviews in Ottawa, Canada."
+            mediaType="image"
+            media={forwardJs}
+            mediaUrl="https://forwardjs.com/ottawa/schedule#lecture-399"
+            date="Apr 5, 2018" />
+          <GenericCard
+            title="DC Tech Meetup #63 at the Washington Post"
+            description="Another full house for DC Tech Meetup - over 300 DC innovators in attendance!"
+            mediaType="video"
+            media={<iframe width="100%" height="200px" src="https://www.youtube.com/embed/5jNMZw7DNyk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>}
+            mediaUrl="https://www.meetup.com/DC-Tech-Meetup/events/247193478/"
+            date="Mar 26, 2018" />
         </section>
 
         <section className="portfolio">

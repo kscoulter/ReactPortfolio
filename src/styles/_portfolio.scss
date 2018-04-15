@@ -18,9 +18,12 @@ body {
       }
       h2 {
         border-top: 3px solid #5F5F5F;
+        font-size: 1.7em;
+        padding: 10px 0;
       }
       p {
         text-align: left;
+        line-height: 1.4em;
       }
       .project-image {
         display: block;
@@ -48,6 +51,7 @@ body {
         &:nth-child(even){
           img {
             float: none;
+            width: 100%;
           }
         }
       }

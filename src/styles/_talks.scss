@@ -1,13 +1,15 @@
 body {
   .talks {
     .card-container {
+      color: white;
       .card {
         padding: 1em;
         h2 {
           margin-bottom: .5em;
         }
         p {
-          margin-bottom: 1em;
+          margin-bottom: 2em;
+          line-height: 1.5em;
         }
         a {
           padding: .5em 1em;
