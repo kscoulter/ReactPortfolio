@@ -1,0 +1,56 @@
+body {
+  .portfolio {
+    color: #5F5F5F;
+    .project {
+      display: flex;
+      &:nth-child(even) {
+        background-color: #EFEFEF;
+        flex-direction: row-reverse;
+      }
+      &:nth-child(odd) {
+        img {
+          float: right;
+        }
+      }
+      .col {
+        width: 50%;
+        padding: 3% 6%;
+      }
+      h2 {
+        border-top: 3px solid #5F5F5F;
+      }
+      p {
+        text-align: left;
+      }
+      .project-image {
+        display: block;
+        img {
+          height: 300px;
+          width: 300px;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+  @media (max-width: 700px){
+    .portfolio {
+      .project {
+        display: block;
+        .col {
+          width: 100%;
+          text-align: center;
+        }
+        &:nth-child(odd){
+          img {
+            float: none;
+          }
+        }
+        &:nth-child(even){
+          img {
+            float: none;
+          }
+        }
+      }
+    }
+  }
+}

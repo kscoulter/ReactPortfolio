@@ -1,3 +1,159 @@
+@charset "UTF-8";
+body .banner {
+  background-image: url("./assets/images/ksenia_banner.gif");
+  background-size: cover;
+  background-position: left;
+  flex-direction: column;
+  min-height: 99vh;
+  display: flex; }
+  body .banner .content-wrapper {
+    margin: auto;
+    text-align: center; }
+    body .banner .content-wrapper h1 {
+      font-family: 'Lora', serif;
+      font-size: 4.5em;
+      line-height: 1.1em; }
+    body .banner .content-wrapper h2 {
+      font-family: 'Slabo 27px', serif;
+      font-size: 2em;
+      letter-spacing: 1.5px;
+      margin-bottom: 30px; }
+@media (min-width: 700px) {
+  body .banner {
+    background-position: center; } }
+
+body .portfolio {
+  color: #5F5F5F; }
+  body .portfolio .project {
+    display: flex; }
+    body .portfolio .project:nth-child(even) {
+      background-color: #EFEFEF;
+      flex-direction: row-reverse; }
+    body .portfolio .project:nth-child(odd) img {
+      float: right; }
+    body .portfolio .project .col {
+      width: 50%;
+      padding: 3% 6%; }
+    body .portfolio .project h2 {
+      border-top: 3px solid #5F5F5F; }
+    body .portfolio .project p {
+      text-align: left; }
+    body .portfolio .project .project-image {
+      display: block; }
+      body .portfolio .project .project-image img {
+        height: 300px;
+        width: 300px;
+        border-radius: 15px; }
+@media (max-width: 700px) {
+  body .portfolio .project {
+    display: block; }
+    body .portfolio .project .col {
+      width: 100%;
+      text-align: center; }
+    body .portfolio .project:nth-child(odd) img {
+      float: none; }
+    body .portfolio .project:nth-child(even) img {
+      float: none; } }
+
+body .medium-posts.card-container {
+  min-height: 30vh;
+  display: flex;
+  flex-wrap: wrap; }
+  body .medium-posts.card-container a.card {
+    flex: 50%;
+    justify-content: center;
+    text-align: center;
+    background: center center no-repeat;
+    background-size: cover; }
+  body .medium-posts.card-container h2.post-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    padding: 30px 5px; }
+    body .medium-posts.card-container h2.post-title:hover {
+      background-color: rgba(0, 0, 0, 0.25);
+      text-shadow: 2px 3px 4px #323232; }
+
+@media (min-width: 1070px) {
+  body .card-container.medium-posts a.card {
+    flex: 1; } }
+body .talks .card-container .card {
+  padding: 1em; }
+  body .talks .card-container .card h2 {
+    margin-bottom: .5em; }
+  body .talks .card-container .card p {
+    margin-bottom: 1em; }
+  body .talks .card-container .card a {
+    padding: .5em 1em;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-left: 3px; }
+    body .talks .card-container .card a:first-of-type {
+      margin-left: 0; }
+    body .talks .card-container .card a:hover {
+      background-color: rgba(0, 0, 0, 0.3); }
+@media (min-width: 1070px) {
+  body .talks .card-container {
+    display: flex; }
+    body .talks .card-container .card {
+      display: flex;
+      flex-direction: column;
+      flex: 1; }
+      body .talks .card-container .card .talk-links {
+        margin-top: auto; } }
+
+body section.contact {
+  background-image: url("./assets/images/mountainsbw.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+  text-align: center; }
+  body section.contact .content {
+    margin: auto;
+    padding: 1.5em 1em; }
+    body section.contact .content p {
+      font-size: 1.5em;
+      padding-bottom: 1em; }
+
+body .button {
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: white;
+  color: #0C0C0C;
+  display: block;
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px 16px;
+  text-decoration: none;
+  text-transform: uppercase; }
+  body .button::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #0C0C0C;
+    font-size: 18px;
+    padding-right: 0.5em; }
+  body .button.gmail::before {
+    content: "\f0e0"; }
+  body .button.twitter::before {
+    content: "\f099"; }
+  body .button.medium::before {
+    content: ""; }
+  body .button.github::before {
+    content: "\f09b"; }
+  body .button.linkedin::before {
+    content: ""; }
+@media (min-width: 700px) {
+  body .button {
+    display: inline-block; } }
+
+body footer {
+  background-color: black;
+  text-align: center;
+  padding: .5em; }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,26 +168,10 @@ body {
   body a {
     text-decoration: none;
     color: white; }
-  body .card-container.medium-posts {
-    min-height: 30vh;
-    display: flex;
-    flex-wrap: wrap; }
-    body .card-container.medium-posts a.card {
-      flex: 50%;
-      justify-content: center;
-      text-align: center;
-      background: center center no-repeat;
-      background-size: cover; }
-    body .card-container.medium-posts h2.post-title {
-      background-color: rgba(0, 0, 0, 0.5);
-      height: 100%;
-      padding: 30px 5px; }
-      body .card-container.medium-posts h2.post-title:hover {
-        background-color: rgba(0, 0, 0, 0.25);
-        text-shadow: 2px 3px 4px #323232; }
-
-@media (min-width: 1070px) {
-  body .card-container.medium-posts a.card {
-    flex: 25%; } }
+  body h1.section-heading {
+    background-color: #2f2f2f;
+    text-align: center;
+    text-transform: uppercase;
+    padding: .5em; }
 
 /*# sourceMappingURL=App.css.map */

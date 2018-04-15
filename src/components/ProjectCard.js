@@ -9,7 +9,7 @@ class ProjectCard extends React.Component{
           <p>{this.props.description}</p>
         </div>
         <div className="col">
-          <a href={this.props.url}><img src={this.props.image} alt="screenshot of the app"/></a>
+          <a className="project-image" href={this.props.url}><img src={this.props.image} alt="screenshot of the app"/></a>
         </div>
       </div>
     )

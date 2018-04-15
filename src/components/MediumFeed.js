@@ -17,7 +17,6 @@ class MediumFeed extends React.Component{
     axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40kcoulter')
       .then(function(response) {
           const posts = response.data.items;
-          console.log(posts);
           self.filterPosts(posts);
           self.pullImage(self.state.posts);
         // })
@@ -43,7 +42,7 @@ class MediumFeed extends React.Component{
       //this might be a pretty brittle expression.
       const re = new RegExp('"https([^"]+)"');
       const imgMatch = re.exec(contentStr);
-      post.image = imgMatch[0].replace(/\"/g, '');
+      post.image = imgMatch[0].replace(/"/g, '');
     })
     this.setState({ posts })
   }
