@@ -54,11 +54,14 @@ body .portfolio {
     body .portfolio .project .col {
       width: 100%;
       text-align: center; }
+      body .portfolio .project .col h2 {
+        border: none; }
     body .portfolio .project:nth-child(odd) img {
-      float: none; }
+      float: none;
+      max-width: 100%; }
     body .portfolio .project:nth-child(even) img {
       float: none;
-      width: 100%; } }
+      max-width: 100%; } }
 
 body .medium-posts.card-container {
   min-height: 30vh;
@@ -86,18 +89,22 @@ body .talks .card-container {
   body .talks .card-container .card {
     padding: 1em; }
     body .talks .card-container .card h2 {
-      margin-bottom: .5em; }
+      margin-bottom: .5em;
+      letter-spacing: 1px; }
     body .talks .card-container .card p {
-      margin-bottom: 2em;
-      line-height: 1.5em; }
-    body .talks .card-container .card a {
-      padding: .5em 1em;
-      background-color: rgba(0, 0, 0, 0.2);
-      margin-left: 3px; }
-      body .talks .card-container .card a:first-of-type {
-        margin-left: 0; }
-      body .talks .card-container .card a:hover {
-        background-color: rgba(0, 0, 0, 0.3); }
+      margin-bottom: .5em;
+      line-height: 1.5em;
+      letter-spacing: 0.5px; }
+    body .talks .card-container .card .talk-links {
+      padding-top: 2em; }
+      body .talks .card-container .card .talk-links a {
+        padding: .5em 1em;
+        background-color: rgba(0, 0, 0, 0.2);
+        margin-left: 3px; }
+        body .talks .card-container .card .talk-links a:first-of-type {
+          margin-left: 0; }
+        body .talks .card-container .card .talk-links a:hover {
+          background-color: rgba(0, 0, 0, 0.3); }
 @media (min-width: 1070px) {
   body .talks .card-container {
     display: flex; }

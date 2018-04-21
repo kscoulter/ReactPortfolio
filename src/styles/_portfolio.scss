@@ -42,16 +42,20 @@ body {
         .col {
           width: 100%;
           text-align: center;
+          h2 {
+            border: none;
+          }
         }
         &:nth-child(odd){
           img {
             float: none;
+            max-width: 100%;
           }
         }
         &:nth-child(even){
           img {
             float: none;
-            width: 100%;
+            max-width: 100%;
           }
         }
       }

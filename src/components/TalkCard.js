@@ -9,7 +9,7 @@ class TalkCard extends React.Component{
     return(
       <div className="card" style={{backgroundColor: background}}>
         <h2>{title}</h2>
-        <p>{description}</p>
+        {description}
         <div className="talk-links">
           {links.map( (obj, index) =>{
             return(<a key={obj[0]} href={obj[1]}>{obj[0]}</a>)
