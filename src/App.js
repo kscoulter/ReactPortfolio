@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import TopNav from './components/TopNav';
 import SectionHeading from './components/SectionHeading';
 import LinkButton from './components/LinkButton';
 import GenericCard from './components/GenericCard';
@@ -17,6 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <TopNav />
         <section className="banner">
           <div className="content-wrapper">
             <h1>Ksenia Coulter</h1>

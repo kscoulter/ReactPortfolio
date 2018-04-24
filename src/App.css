@@ -1,4 +1,31 @@
 @charset "UTF-8";
+body nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  body nav ul {
+    text-align: right; }
+    body nav ul li {
+      display: inline-block; }
+      body nav ul li a {
+        display: inline-block;
+        text-transform: uppercase;
+        padding: 1em; }
+        body nav ul li a:hover {
+          background-color: rgba(0, 0, 0, 0.3); }
+      body nav ul li #resume::before {
+        content: "\f019";
+        font-family: FontAwesome;
+        font-size: 17px;
+        margin-right: 8px; }
+    @media (max-width: 535px) {
+      body nav ul {
+        text-align: center;
+        font-size: 13px; }
+        body nav ul li a {
+          padding: .6em; } }
+
 body .banner {
   background-image: url("./assets/images/ksenia_banner.gif");
   background-size: cover;
@@ -13,7 +40,8 @@ body .banner {
     body .banner .content-wrapper h1 {
       font-family: 'Lora', serif;
       font-size: 4.5em;
-      line-height: 1.1em; }
+      line-height: 1.1em;
+      padding-top: 22px; }
     body .banner .content-wrapper h2 {
       font-family: 'Slabo 27px', serif;
       font-size: 2em;
